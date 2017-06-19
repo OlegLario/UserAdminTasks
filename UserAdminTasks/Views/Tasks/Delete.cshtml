@@ -1,0 +1,122 @@
+﻿@model UserAdminTasks.Models.Task
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Task</h4>
+    <hr />
+
+    <style>
+        label {
+            display: inline-block;
+            width: 5em;
+        }
+    </style>
+    <script>
+    $(document).ready(function () {
+        $(document).tooltip({
+            track: true
+        });
+    });
+    </script>
+
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FromUser.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FromUser.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToUser.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToUser.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDateTask)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDateTask)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlannedStartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlannedStartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlannedCompletionDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlannedCompletionDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartExecution)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartExecution)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsExecution)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsExecution)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsDone)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<style type="text/css">
+    .ui-tooltip {
+        font-size: small;
+        font-family: Arial;
+    }
+</style>

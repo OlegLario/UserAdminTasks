@@ -1,0 +1,90 @@
+﻿@model UserAdminTasks.Models.Task
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Task</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FromUser.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FromUser.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToUser.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToUser.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDateTask)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDateTask)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlannedStartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlannedStartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlannedCompletionDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlannedCompletionDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartExecution)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartExecution)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsExecution)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsExecution)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsDone)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
